@@ -1,0 +1,33 @@
+footer{
+    color: white;
+    background-color: black;
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.style-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.style-footer>li{
+    list-style:  none;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+.container2{
+    display: flex;
+    justify-content: center;
+    padding: 70px 0px;
+}
+.container2>.icon{
+    padding: 0px 30px;
+}

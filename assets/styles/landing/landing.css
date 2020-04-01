@@ -1,0 +1,18 @@
+.background-jumbotron{
+    background-image: url(/assets/images/landing/bosquedestino.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: inherit;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
