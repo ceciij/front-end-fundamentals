@@ -1,0 +1,33 @@
+
+@media  screen 
+and (min-width : 481px) {
+    .searchbar{
+        width: 200px;
+    }
+    .container2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container2 i{
+        margin-top: 30px;
+    }
+    .hamburguesa{
+        display: none;
+    }
+}
+
+@media  screen 
+and (min-width : 481px) 
+and (max-width : 1024px) {
+    .searchbar{
+        width: 350px;
+    }
+}
+
+@media  screen 
+and (min-width : 1024px) {
+    .searchbar{
+        width: 550px;
+    }
+}

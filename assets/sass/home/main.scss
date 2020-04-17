@@ -1,16 +1,33 @@
-*{
-    margin: 0%;
-    padding: 0%;
-  }
-  
-  body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@import "../variables/variables";
+@import "../resets/resets";
+
+
+@function getSize($size){
+    @return map-get($global-sizes, $size);
+}
+
+$global-sizes:(
+    "small": 15px,
+    "medium": 20px,
+    "big": 30px,
+    "huge": 50px,
+);
+
+
+@mixin flex($j-c:center) {
+    display: flex;
+    justify-content: $j-c;
+    align-items: center;
+}
+
+body {
+    font-family: $roboto;
     height: 90vh;
-  }
-  
+}
+
   #home-cover{
     background-image: url("/assets/images/img_cover_home.jpg");
-    width: 100%;
+    width: $width-default;
     height: 70vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,38 +36,38 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    color: white;
-  }
+    color: $color-white;
+}
+
+
   
   .text-shadow{
     text-shadow: 1px 1px 4px rgb(58, 58, 58);
   }
   
   .title-font{
-    font-size: 30px;
+    font-size: getSize(medium);
   }
   
   .subtitle-font{
-    font-size: 20px;
+    font-size: $text-medium;
   }
   
   .searchbar{
     background-color: white;
-    padding-left: 10px;
+    padding-left: 20px;
     padding: 3px;
     width: 500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between);
     box-shadow: 10px 10px 18px rgb(58, 58, 58);
-    border-radius: 4px;
+    border-radius: $border-radius-default;
   }
   
   .searchbar > input {
-    width: 100%;
+    width: $width-default;
     padding: 0;
     margin: 0;
-    font-size: 15px;
+    font-size: $text-small;
     border: none;
     height: 45px;
   }
@@ -58,9 +75,9 @@
   .search-buttom{
     height: 45px;
     width: 45px;
-    background-color: rgb(26, 24, 36);
-    color: white;
-    border-radius: 5px;
+    background-color: $bg-color-darkblue;
+    color: $color-white;
+    border-radius: $border-radius-default;
   }
   
   /*Reusable margins for website*/
@@ -73,9 +90,9 @@
     margin-bottom: 30px;
   }
   .searchbar:hover{
-    background-color: rgb(35, 192, 35);
+    background-color: $bg-color-green;
   }
   .searchbar>button:focus{
-      background-color: rgb(177, 177, 177);
+      background-color: $bg-color-gray;
   }
 
